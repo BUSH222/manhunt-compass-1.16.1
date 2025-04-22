@@ -11,6 +11,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -35,9 +36,30 @@ public class ManhuntCompassItem extends Item {
 
             // Optionally send a message to the player
             player.sendMessage(new TranslatableText("item.manhunt-compass.manhunt_compass.right_click", targetPos.getX(), targetPos.getY(), targetPos.getZ()), true);
+            updateCompassBehavior(stack, world, player);
         }
 
         return new TypedActionResult<>(ActionResult.SUCCESS, player.getStackInHand(hand));
+    }
+
+    public void updateCompassBehavior(ItemStack stack, World world, PlayerEntity player) {
+        if (!world.isClient && player != null) {
+            // Calculate the angle between the player and the target position
+            double dx = targetPos.getX() + 0.5 - player.getX();
+            double dz = targetPos.getZ() + 0.5 - player.getZ();
+            double angle = Math.atan2(dz, dx) * (180 / Math.PI) - player.getYaw(1);
+
+            // Normalize the angle to 0-360 degrees
+            angle = MathHelper.floorMod((int) angle, 360) + 90;
+
+            // Map the angle to a texture index (0-31)
+            int textureIndex = (int) Math.round(angle / 11.25) % 32;
+
+            // Store the texture index in the item's NBT data
+            CompoundTag tag = stack.getOrCreateTag();
+            tag.putInt("CustomModelData", textureIndex);
+            stack.setTag(tag);
+        }
     }
 
     @Override

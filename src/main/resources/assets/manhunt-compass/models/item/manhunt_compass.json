@@ -1,7 +1,40 @@
 {
-    "parent": "minecraft:item/generated",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "minecraft:item/compass_00",
-        "layer1": "minecraft:item/barrier"
-    }
+        "layer0": "minecraft:item/compass_00"
+    },
+    "overrides": [
+        { "predicate": { "custom_model_data": 0 }, "model": "minecraft:item/compass_00" },
+        { "predicate": { "custom_model_data": 1 }, "model": "minecraft:item/compass_01" },
+        { "predicate": { "custom_model_data": 2 }, "model": "minecraft:item/compass_02" },
+        { "predicate": { "custom_model_data": 3 }, "model": "minecraft:item/compass_03" },
+        { "predicate": { "custom_model_data": 4 }, "model": "minecraft:item/compass_04" },
+        { "predicate": { "custom_model_data": 5 }, "model": "minecraft:item/compass_05" },
+        { "predicate": { "custom_model_data": 6 }, "model": "minecraft:item/compass_06" },
+        { "predicate": { "custom_model_data": 7 }, "model": "minecraft:item/compass_07" },
+        { "predicate": { "custom_model_data": 8 }, "model": "minecraft:item/compass_08" },
+        { "predicate": { "custom_model_data": 9 }, "model": "minecraft:item/compass_09" },
+        { "predicate": { "custom_model_data": 10 }, "model": "minecraft:item/compass_10" },
+        { "predicate": { "custom_model_data": 11 }, "model": "minecraft:item/compass_11" },
+        { "predicate": { "custom_model_data": 12 }, "model": "minecraft:item/compass_12" },
+        { "predicate": { "custom_model_data": 13 }, "model": "minecraft:item/compass_13" },
+        { "predicate": { "custom_model_data": 14 }, "model": "minecraft:item/compass_14" },
+        { "predicate": { "custom_model_data": 15 }, "model": "minecraft:item/compass_15" },
+        { "predicate": { "custom_model_data": 16 }, "model": "minecraft:item/compass_16" },
+        { "predicate": { "custom_model_data": 17 }, "model": "minecraft:item/compass_17" },
+        { "predicate": { "custom_model_data": 18 }, "model": "minecraft:item/compass_18" },
+        { "predicate": { "custom_model_data": 19 }, "model": "minecraft:item/compass_19" },
+        { "predicate": { "custom_model_data": 20 }, "model": "minecraft:item/compass_20" },
+        { "predicate": { "custom_model_data": 21 }, "model": "minecraft:item/compass_21" },
+        { "predicate": { "custom_model_data": 22 }, "model": "minecraft:item/compass_22" },
+        { "predicate": { "custom_model_data": 23 }, "model": "minecraft:item/compass_23" },
+        { "predicate": { "custom_model_data": 24 }, "model": "minecraft:item/compass_24" },
+        { "predicate": { "custom_model_data": 25 }, "model": "minecraft:item/compass_25" },
+        { "predicate": { "custom_model_data": 26 }, "model": "minecraft:item/compass_26" },
+        { "predicate": { "custom_model_data": 27 }, "model": "minecraft:item/compass_27" },
+        { "predicate": { "custom_model_data": 28 }, "model": "minecraft:item/compass_28" },
+        { "predicate": { "custom_model_data": 29 }, "model": "minecraft:item/compass_29" },
+        { "predicate": { "custom_model_data": 30 }, "model": "minecraft:item/compass_30" },
+        { "predicate": { "custom_model_data": 31 }, "model": "minecraft:item/compass_31" }
+    ]
 }

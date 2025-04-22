@@ -1,7 +1,6 @@
 package com.bush22.manhuntcompass;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.minecraft.item.Item; // Add this import
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier; // Ensure this is imported
@@ -22,7 +21,7 @@ public class ManhuntCompass implements ModInitializer {
 	
 
 	// things start here
-	
+
 	private static final BlockPos TARGET_COORDINATE = new BlockPos(100, 64, 200);
 
 	public static final ManhuntCompassItem MANHUNT_COMPASS = new ManhuntCompassItem(
@@ -38,8 +37,9 @@ public class ManhuntCompass implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "manhunt_compass"), MANHUNT_COMPASS);
-
 	}
+
+	
 
 	
 
