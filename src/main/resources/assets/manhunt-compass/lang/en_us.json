@@ -1,0 +1,5 @@
+{
+    "item.manhunt-compass.manhunt_compass": "Manhunt Compass",
+    "item.manhunt-compass.manhunt_compass.tooltip": "Points to X: %d, Y: %d, Z: %d",
+    "item.manhunt-compass.manhunt_compass.right_click": "You right-clicked the compass! Target: X: %d, Y: %d, Z: %d"
+}

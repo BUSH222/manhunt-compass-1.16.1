@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.Item; // Add this import
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier; // Ensure this is imported
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry; // Ensure this is imported
 
 import org.apache.logging.log4j.LogManager;
@@ -17,9 +18,17 @@ public class ManhuntCompass implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+	    
+	
 
 	// things start here
-	public static final Item MANHUNT_COMPASS = new Item(new Item.Settings().group(ItemGroup.TOOLS));
+	
+	private static final BlockPos TARGET_COORDINATE = new BlockPos(100, 64, 200);
+
+	public static final ManhuntCompassItem MANHUNT_COMPASS = new ManhuntCompassItem(
+        new Item.Settings().group(ItemGroup.TOOLS), TARGET_COORDINATE
+    );
+	
 
 	@Override
 	public void onInitialize() {
